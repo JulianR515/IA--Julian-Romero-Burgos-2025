@@ -1,7 +1,6 @@
 import streamlit as st
 from groq import Groq
 
-
 # --- Configuración inicial ---
 st.set_page_config(page_title="Mi chat de IA Julian Romero", page_icon="👍")
 st.title("Mi primera aplicación con Streamlit de Julian Romero")
@@ -91,4 +90,3 @@ if __name__ == "__main__":
 
 
 # python -m streamlit run MiChat.py
-
