@@ -1,6 +1,17 @@
 import streamlit as st
 from groq import Groq
 
+import subprocess
+import sys
+
+# Verificar si groq está instalado, si no, instalarlo
+try:
+    from groq import Groq
+except ImportError:
+    subprocess.check_call([sys.executable, "-m", "pip", "install", "groq==0.32.0"])
+    from groq import Groq
+
+
 # --- Configuración inicial ---
 st.set_page_config(page_title="Mi chat de IA Julian Romero", page_icon="👍")
 st.title("Mi primera aplicación con Streamlit de Julian Romero")
